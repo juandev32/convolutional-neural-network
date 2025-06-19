@@ -17,6 +17,31 @@ The goal was to maximize accuracy of the classification task while using a relit
 
 ---
 ## Installation and Usage
+
+0. The dataset of pet images is too large to keep on a github repository. This is the URL to the classification competition that the dataset originated from https://www.kaggle.com/c/dogs-vs-cats/data. Downloading the pet images, unzipping the dataset, and adding the `Dataset/` directory to `Convolutional Neural Network` will preserve the file structure.
+
+**The file structure should appear as the following:**
+
+```
+📦 Convolutional Neural Network
+├── 📂 Dataset
+│   ├── 📂 PetImages
+│   │   ├── 📂 Cat
+│   │   ├── 📂 Dog
+│   │   ├── 📂 Test
+│   │   │   ├── 📂 Cat
+│   │   │   └── 📂 Dog
+│   │   └── 📂 Train
+│   │       ├── 📂 Cat
+│   │       └── 📂 Dog
+│   ├── 📂 PetImagesTest
+│   │   ├── 📂 Cat
+│   │   └── 📂 Dog
+│   └── 📂 PetImagesTrain
+│       ├── 📂 Cat
+│       └── 📂 Dog
+```
+
 1. The `CatDogClassifier.py` script creates, trains, and tests a Convolutional Neural Network. 
    
    *Running the script will:*
@@ -31,9 +56,9 @@ The goal was to maximize accuracy of the classification task while using a relit
 
    **f.** Saves the model weights in `/"Convolutional Neural Network"/` directory.
    
-3. Utilizing `tensorflow-gpu` for this project is optional, but because the training dataset is relatively small and the architecture is simple, it will train quickly on the cpu. It may be useful when changing hyperparameters such as increasing `INPUT_SIZE`, `NUM_FILTERS_#`, `EPOCHS`, or decreasing `POOL_SIZE_#`. 
+2. Utilizing `tensorflow-gpu` for this project is optional, but because the training dataset is relatively small and the architecture is simple, it will train quickly on the cpu. It may be useful when changing hyperparameters such as increasing `INPUT_SIZE`, `NUM_FILTERS_#`, `EPOCHS`, or decreasing `POOL_SIZE_#`. 
 
-4. It is recommended that you create a Python virtual environment so that any pre-existing versions of these libraries are not updated.
+3. It is recommended that you create a Python virtual environment so that any pre-existing versions of these libraries are not updated.
    
 ---
 
